@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.scss"
 
 function Navbar(){
     const [open,setOpen] =useState(false)
+    useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth >= 876) { // Adjust 876px according to your breakpoint for md
+            setOpen(false); // Close the menu when the window is resized to md or larger
+          }
+        };
+        // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
     return(
         <nav>
             <div className="left">
