@@ -1,6 +1,12 @@
 import Navbar from "./components/Navbar/Navbar"
 import "./layout.scss"
-import HomePage from "./routes/homepages/homepage"
+import HomePage from "./routes/homePage/homepage"
+import{
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom"
 
 function App() {
   return (
