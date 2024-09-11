@@ -7,7 +7,7 @@
   .imageContainer {
     flex: 2;
     height: 200px;
-
+  
     @include md {
       display: none;
     }
