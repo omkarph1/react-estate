@@ -1,5 +1,5 @@
 @mixin sm{
-    @media(max-width: 876px){
+    @media(max-width: 738px){
         @content;
     }
 }
@@ -11,7 +11,7 @@
 }
 
 @mixin lg{
-    @media(max-width: 1340px){
+    @media(max-width: 1366px){
         @content;
     }
 }
